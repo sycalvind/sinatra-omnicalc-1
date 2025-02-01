@@ -14,6 +14,10 @@ end
 
 get("/square/results") do
   # logic for calculations
+  @value = params.fetch("number").to_f
+  @result = @value ** 2
+  @print_hash = {"Number"=>@value, "Square"=>@result}
+  erb(:result)
   # store array for things to print
   # erb result
 end
