@@ -1,1 +1,9 @@
-myhash.each_pair {|k,v| puts k if v == "Hello, "} 
+<h1><%= @function_print.capitalize %> Results</h1>
+<dl>
+<% @print_hash.each_pair do |k, v| %>
+  <dt><%= k %></dt>
+  <dd><%= v %></dd>
+<% end %>
+</dl>
+<% link = "/#{@function}/new" %>
+<a href = <%= link %>>Calculate another <%= @function_print%></a>
